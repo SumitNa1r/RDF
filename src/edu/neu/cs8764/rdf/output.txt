@@ -1,0 +1,23 @@
+log4j:WARN No appenders could be found for logger (org.apache.jena.riot.system.stream.JenaIOEnvironment).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+<http://cs8764/neu/edu/Activity3> <http://cs8764/neu/edu/Activity/NAME#3> "name3" .
+<http://cs8764/neu/edu/Activity3> <http://cs8764/neu/edu/Activity/ID#3> "3" .
+<http://cs8764/neu/edu/Activity8> <http://cs8764/neu/edu/Activity/NAME#8> "name8" .
+<http://cs8764/neu/edu/Activity8> <http://cs8764/neu/edu/Activity/ID#8> "8" .
+<http://cs8764/neu/edu/Activity1> <http://cs8764/neu/edu/Activity/NAME#1> "name1" .
+<http://cs8764/neu/edu/Activity1> <http://cs8764/neu/edu/Activity/ID#1> "1" .
+<http://cs8764/neu/edu/Activity6> <http://cs8764/neu/edu/Activity/NAME#6> "name6" .
+<http://cs8764/neu/edu/Activity6> <http://cs8764/neu/edu/Activity/ID#6> "6" .
+<http://cs8764/neu/edu/Activity4> <http://cs8764/neu/edu/Activity/NAME#4> "name4" .
+<http://cs8764/neu/edu/Activity4> <http://cs8764/neu/edu/Activity/ID#4> "4" .
+<http://cs8764/neu/edu/Activity9> <http://cs8764/neu/edu/Activity/NAME#9> "name9" .
+<http://cs8764/neu/edu/Activity9> <http://cs8764/neu/edu/Activity/ID#9> "9" .
+<http://cs8764/neu/edu/Activity2> <http://cs8764/neu/edu/Activity/NAME#2> "name2" .
+<http://cs8764/neu/edu/Activity2> <http://cs8764/neu/edu/Activity/ID#2> "2" .
+<http://cs8764/neu/edu/Activity7> <http://cs8764/neu/edu/Activity/NAME#7> "name7" .
+<http://cs8764/neu/edu/Activity7> <http://cs8764/neu/edu/Activity/ID#7> "7" .
+<http://cs8764/neu/edu/Activity0> <http://cs8764/neu/edu/Activity/NAME#0> "name0" .
+<http://cs8764/neu/edu/Activity0> <http://cs8764/neu/edu/Activity/ID#0> "0" .
+<http://cs8764/neu/edu/Activity5> <http://cs8764/neu/edu/Activity/NAME#5> "name5" .
+<http://cs8764/neu/edu/Activity5> <http://cs8764/neu/edu/Activity/ID#5> "5" .
