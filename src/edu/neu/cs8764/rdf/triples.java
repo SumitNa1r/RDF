@@ -16,23 +16,37 @@ public class triples extends Object {
 	public static void main(String args[]) {
 		// some definitions
         String activityURI    = "http://cs8764/neu/edu/Activity";
+        String activityURI1    = "http://cs8764/neu/edu/TEMP";
         String activityIDURI = "http://cs8764/neu/edu/Activity/ID";
         String activityNameURI = "http://cs8764/neu/edu/Activity/NAME";
+        String has_property = "http://cs8764/neu/edu/Activity/HAS_PROPERTY";
+        
         int id = 0;
         String name   = "name";
         
         // create an empty model
 
 		Model model = ModelFactory.createDefaultModel();
+		Model model1 = ModelFactory.createDefaultModel();
+		
 
 		for(int i= 0; i< 10; i++){
-		Property id_property = model.getProperty(activityIDURI + "#"+i);
-		Property name_property = model.getProperty(activityNameURI + "#"+i);
-
-		Resource r = model.createResource(activityURI+i)
+		Property id_property = model.getProperty(activityIDURI);
+		Property name_property = model.getProperty(activityNameURI);
+		Property hp = model.getProperty(has_property);
+		
+		Resource r1 = model1.createResource(activityURI1+"#"+i)
 				.addProperty(id_property, i+"")
 				.addProperty(name_property, name + i);
+		
+		Resource r = model.createResource(activityURI+"#"+i)
+				.addProperty(id_property, i+"")
+				.addProperty(name_property, name + i)
+				.addProperty(hp, r1);
 		}
+		
+		RDFDataMgr.write(System.out, model1, Lang.NTRIPLES) ;
+		System.out.println("--------------------------------------------------");
 		RDFDataMgr.write(System.out, model, Lang.NTRIPLES) ;
 		//print_details(model);
 
