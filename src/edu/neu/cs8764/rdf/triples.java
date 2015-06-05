@@ -4,6 +4,12 @@ package edu.neu.cs8764.rdf;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
 
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
@@ -45,10 +51,30 @@ public class triples extends Object {
 				.addProperty(hp, r1);
 		}
 		
-		RDFDataMgr.write(System.out, model1, Lang.NTRIPLES) ;
+		/*RDFDataMgr.write(System.out, model1, Lang.NTRIPLES) ;
 		System.out.println("--------------------------------------------------");
-		RDFDataMgr.write(System.out, model, Lang.NTRIPLES) ;
+		RDFDataMgr.write(System.out, model, Lang.NTRIPLES) ;*/
 		//print_details(model);
+		
+		String queryString = 
+	            "SELECT ?name_property WHERE {?name_property <http://cs8764/neu/edu/Activity/NAME> \"name9\"}" ;
+		Query query = QueryFactory.create(queryString) ;
+		
+		QueryExecution qexec = QueryExecutionFactory.create(query, model);
+       
+        try {
+            ResultSet rs = qexec.execSelect() ;
+            while(rs.hasNext()) {
+            	System.out.println("Name: ") ;
+                QuerySolution rb = rs.nextSolution() ;
+                //System.out.println(rb + "\n");
+                
+                RDFNode x = rb.get("name_property") ;
+                System.out.println("   "+x) ;
+            }
+        } finally  {
+            qexec.close() ;
+        }
 
 	}
 	
